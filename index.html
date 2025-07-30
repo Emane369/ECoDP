@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Figurine Gallery | Premium Collectible Figures</title>
+    <title>DepreART | Premium Collectible Figures</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
     <style>
@@ -78,6 +78,7 @@
             padding: 0 15px;
         }
         
+        /* Header Styles */
         header {
             background-color: white;
             box-shadow: var(--shadow);
@@ -167,6 +168,7 @@
             cursor: pointer;
         }
         
+        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, rgba(108, 92, 231, 0.9) 0%, rgba(93, 74, 236, 0.9) 100%), url('https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
             color: white;
@@ -187,6 +189,7 @@
             margin: 0 auto 30px;
         }
         
+        /* Products Section */
         .section-title {
             text-align: center;
             margin: 60px 0 40px;
@@ -240,6 +243,7 @@
             overflow: hidden;
         }
         
+        /* REPLACE THIS IMAGE WITH YOUR OWN */
         .product-image img {
             width: 100%;
             height: 100%;
@@ -291,6 +295,7 @@
             color: #fdcb6e;
         }
         
+        /* Features Section */
         .features {
             background-color: white;
             padding: 80px 0;
@@ -326,6 +331,7 @@
             font-size: 1.3rem;
         }
         
+        /* Call to Action */
         .cta {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: white;
@@ -351,6 +357,7 @@
             flex-wrap: wrap;
         }
         
+        /* Footer */
         footer {
             background-color: var(--dark);
             color: white;
@@ -429,6 +436,7 @@
             font-size: 0.9rem;
         }
         
+        /* WhatsApp Floating Button */
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
@@ -452,6 +460,7 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
         
+        /* Cart Modal */
         .cart-modal {
             position: fixed;
             top: 0;
@@ -553,46 +562,7 @@
             visibility: visible;
         }
         
-        /* Image Upload Instructions */
-        .image-instructions {
-            background-color: #f8f9fa;
-            border-left: 4px solid var(--primary);
-            padding: 25px;
-            margin: 40px 0;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        .instruction-title {
-            color: var(--primary);
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-        }
-        
-        .instruction-steps {
-            margin-left: 20px;
-        }
-        
-        .instruction-steps li {
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
-        
-        .code {
-            background-color: #2d3436;
-            color: white;
-            padding: 3px 6px;
-            border-radius: 4px;
-            font-family: monospace;
-            display: inline-block;
-            margin: 0 3px;
-        }
-        
-        .highlight {
-            background-color: #fff9db;
-            padding: 2px 5px;
-            border-radius: 3px;
-        }
-        
+        /* Responsive Styles */
         @media (max-width: 992px) {
             .hero h1 {
                 font-size: 2.8rem;
@@ -666,7 +636,7 @@
         <div class="container header-container">
             <a href="#" class="logo">
                 <i class="fas fa-dragon"></i>
-                Figurine Gallery
+                Figurine Emporium
             </a>
             
             <div class="hamburger">
@@ -677,7 +647,7 @@
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#products">Shop</a></li>
-                    <li><a href="#instructions">Instructions</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -691,7 +661,7 @@
                 </a>
                 <a href="#" class="nav-icon cart-icon">
                     <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-count">0</span>
+                    <span class="cart-count">2</span>
                 </a>
             </div>
         </div>
@@ -711,7 +681,6 @@
         <div class="container">
             <div class="section-title">
                 <h2>Featured Figures</h2>
-                <p>Add your own figures by replacing the placeholder images</p>
             </div>
             
             <div class="products-grid">
@@ -719,7 +688,6 @@
                 <div class="product-card">
                     <div class="product-image">
                         <!-- REPLACE THIS IMAGE WITH YOUR OWN -->
-                        <!-- Example: <img src="images/dragon.jpg" alt="Mythical Dragon Figure"> -->
                         <img src="https://images.unsplash.com/photo-1589254065878-42c9da997008?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mythical Dragon Figure">
                         <div class="product-badge">Limited Edition</div>
                     </div>
@@ -744,7 +712,6 @@
                 <div class="product-card">
                     <div class="product-image">
                         <!-- REPLACE THIS IMAGE WITH YOUR OWN -->
-                        <!-- Example: <img src="images/knight.jpg" alt="Warrior Knight Figure"> -->
                         <img src="https://images.unsplash.com/photo-1589254066214-8a35d1f1a0e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Warrior Knight Figure">
                         <div class="product-badge">Best Seller</div>
                     </div>
@@ -769,7 +736,6 @@
                 <div class="product-card">
                     <div class="product-image">
                         <!-- REPLACE THIS IMAGE WITH YOUR OWN -->
-                        <!-- Example: <img src="images/guardian.jpg" alt="Forest Guardian"> -->
                         <img src="https://images.unsplash.com/photo-1589254065878-42c9da997008?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Forest Guardian">
                         <div class="product-badge">New</div>
                     </div>
@@ -794,7 +760,6 @@
                 <div class="product-card">
                     <div class="product-image">
                         <!-- REPLACE THIS IMAGE WITH YOUR OWN -->
-                        <!-- Example: <img src="images/inventor.jpg" alt="Steampunk Inventor"> -->
                         <img src="https://images.unsplash.com/photo-1589254065878-42c9da997008?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Steampunk Inventor">
                         <div class="product-badge">Exclusive</div>
                     </div>
@@ -815,42 +780,11 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Image Upload Instructions -->
-            <div id="instructions" class="image-instructions">
-                <h2 class="instruction-title">How to Add Your Own Images</h2>
-                <ol class="instruction-steps">
-                    <li>
-                        <strong>Replace placeholder images</strong>: Find all instances of <span class="highlight">&lt;!-- REPLACE THIS IMAGE WITH YOUR OWN --&gt;</span> in the HTML
-                    </li>
-                    <li>
-                        <strong>Add your image path</strong>: Replace the <span class="code">src</span> attribute with your image path:
-                        <ul>
-                            <li><strong>Local file</strong>: <span class="code">&lt;img src="images/your-image.jpg" alt="Description"&gt;</span></li>
-                            <li><strong>Online URL</strong>: <span class="code">&lt;img src="https://yourdomain.com/image.jpg" alt="Description"&gt;</span></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Update alt text</strong>: Change the <span class="code">alt</span> attribute to describe your figure
-                    </li>
-                    <li>
-                        <strong>Add more products</strong>: Copy one of the product card sections and update all information
-                    </li>
-                    <li>
-                        <strong>For GitHub hosting</strong>:
-                        <ul>
-                            <li>Create an <span class="code">images</span> folder in your repository</li>
-                            <li>Upload your image files to this folder</li>
-                            <li>Use relative paths: <span class="code">src="images/your-figure.jpg"</span></li>
-                        </ul>
-                    </li>
-                </ol>
-            </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="features">
+    <section id="features" class="features">
         <div class="container">
             <div class="section-title">
                 <h2>Why Choose Us</h2>
@@ -909,7 +843,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3>Figurine Gallery</h3>
+                    <h3>Figurine Emporium</h3>
                     <p>Premium collectible figures for enthusiasts and collectors worldwide.</p>
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
@@ -946,18 +880,70 @@
                     <ul class="footer-links">
                         <li><i class="fas fa-map-marker-alt"></i> 123 Collection Street, Art City</li>
                         <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-                        <li><i class="fas fa-envelope"></i> contact@figurinegallery.com</li>
+                        <li><i class="fas fa-envelope"></i> info@figurineemporium.com</li>
                     </ul>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 Figurine Gallery. All rights reserved.</p>
+                <p>&copy; 2023 Figurine Emporium. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Cart Modal -->
+    <div class="cart-modal">
+        <div class="cart-header">
+            <h3>Your Cart (2)</h3>
+            <span class="close-cart"><i class="fas fa-times"></i></span>
+        </div>
+        <div class="cart-items">
+            <div class="cart-item">
+                <div class="cart-item-image">
+                    <!-- REPLACE THIS IMAGE WITH YOUR OWN -->
+                    <img src="https://images.unsplash.com/photo-1589254065878-42c9da997008?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mythical Dragon">
+                </div>
+                <div class="cart-item-details">
+                    <div class="cart-item-title">Mythical Dragon</div>
+                    <div class="cart-item-price">$89.99</div>
+                    <div class="cart-item-quantity">Quantity: 1</div>
+                </div>
+                <div class="cart-item-remove">
+                    <i class="fas fa-trash"></i>
+                </div>
+            </div>
+            
+            <div class="cart-item">
+                <div class="cart-item-image">
+                    <!-- REPLACE THIS IMAGE WITH YOUR OWN -->
+                    <img src="https://images.unsplash.com/photo-1589254066214-8a35d1f1a0e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Warrior Knight">
+                </div>
+                <div class="cart-item-details">
+                    <div class="cart-item-title">Warrior Knight</div>
+                    <div class="cart-item-price">$74.99</div>
+                    <div class="cart-item-quantity">Quantity: 1</div>
+                </div>
+                <div class="cart-item-remove">
+                    <i class="fas fa-trash"></i>
+                </div>
+            </div>
+        </div>
+        <div class="cart-summary">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span>$164.98</span>
+            </div>
+            <button class="btn btn-primary btn-block">Proceed to Checkout</button>
+            <div class="payment-options">
+                <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa" style="width: 40px; margin-right: 10px;">
+                <img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="Mastercard" style="width: 40px; margin-right: 10px;">
+                <img src="https://img.icons8.com/color/48/000000/paypal.png" alt="PayPal" style="width: 40px; margin-right: 10px;">
+                <img src="https://img.icons8.com/color/48/000000/apple-pay.png" alt="Apple Pay" style="width: 40px;">
+            </div>
+        </div>
+    </div>
+    <div class="overlay"></div>
+
     <script>
         // Toggle Mobile Menu
         const hamburger = document.querySelector('.hamburger');
@@ -967,6 +953,28 @@
             hamburger.querySelector('i').classList.toggle('fa-bars');
             hamburger.querySelector('i').classList.toggle('fa-times');
             navMenu.classList.toggle('active');
+        });
+        
+        // Toggle Cart Modal
+        const cartIcon = document.querySelector('.cart-icon');
+        const cartModal = document.querySelector('.cart-modal');
+        const closeCart = document.querySelector('.close-cart');
+        const overlay = document.querySelector('.overlay');
+        
+        cartIcon.addEventListener('click', (e) => {
+            e.preventDefault();
+            cartModal.classList.add('open');
+            overlay.classList.add('active');
+        });
+        
+        closeCart.addEventListener('click', () => {
+            cartModal.classList.remove('open');
+            overlay.classList.remove('active');
+        });
+        
+        overlay.addEventListener('click', () => {
+            cartModal.classList.remove('open');
+            overlay.classList.remove('active');
         });
         
         // Add to Cart Functionality
