@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DepreART | Premium Collectible Figures</title>
+    <title>DepreArt | Art in every space</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
     <style>
@@ -16,6 +16,8 @@
             --gray: #636e72;
             --light-gray: #dfe6e9;
             --success: #00b894;
+            --warning: #fdcb6e;
+            --danger: #ff7675;
             --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s ease;
         }
@@ -238,17 +240,21 @@
             width: 100%;
             position: relative;
             overflow: hidden;
+            background-color: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .product-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
             transition: var(--transition);
         }
         
         .product-card:hover .product-image img {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
         
         .product-badge {
@@ -291,70 +297,126 @@
             color: #fdcb6e;
         }
         
-        .features {
+        .diagnostic-section {
             background-color: white;
-            padding: 80px 0;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .feature-card {
-            text-align: center;
-            padding: 30px 20px;
+            padding: 40px;
             border-radius: 10px;
-            background-color: var(--light);
-            transition: var(--transition);
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
             box-shadow: var(--shadow);
+            margin: 40px 0;
         }
         
-        .feature-icon {
-            font-size: 50px;
-            color: var(--primary);
-            margin-bottom: 20px;
+        .diagnostic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
         }
         
-        .feature-card h3 {
+        .diagnostic-card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .diagnostic-card h3 {
             margin-bottom: 15px;
-            font-size: 1.3rem;
-        }
-        
-        .cta {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
-            text-align: center;
-            padding: 80px 0;
-        }
-        
-        .cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        
-        .cta p {
-            max-width: 700px;
-            margin: 0 auto 30px;
-            font-size: 1.1rem;
-        }
-        
-        .cta-buttons {
             display: flex;
-            justify-content: center;
-            gap: 20px;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .diagnostic-card i {
+            font-size: 24px;
+        }
+        
+        .status-icon {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+        
+        .status-good {
+            background-color: var(--success);
+            color: white;
+        }
+        
+        .status-warning {
+            background-color: var(--warning);
+            color: white;
+        }
+        
+        .status-bad {
+            background-color: var(--danger);
+            color: white;
+        }
+        
+        .path-tester {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .tester-form {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
             flex-wrap: wrap;
+        }
+        
+        .tester-form input {
+            flex: 1;
+            min-width: 200px;
+            padding: 12px 15px;
+            border: 1px solid var(--light-gray);
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        
+        .image-preview {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .preview-container {
+            height: 200px;
+            width: 100%;
+            background-color: #f1f2f6;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        
+        .preview-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        .error-message {
+            color: var(--danger);
+            background-color: #ffebee;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            display: none;
         }
         
         footer {
             background-color: var(--dark);
             color: white;
             padding: 60px 0 30px;
+            margin-top: 60px;
         }
         
         .footer-grid {
@@ -429,176 +491,6 @@
             font-size: 0.9rem;
         }
         
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
-            background-color: #25d366;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            z-index: 100;
-            transition: var(--transition);
-        }
-        
-        .whatsapp-float:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        }
-        
-        .cart-modal {
-            position: fixed;
-            top: 0;
-            right: -400px;
-            width: 380px;
-            height: 100vh;
-            background-color: white;
-            box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            transition: var(--transition);
-            overflow-y: auto;
-        }
-        
-        .cart-modal.open {
-            right: 0;
-        }
-        
-        .cart-header {
-            padding: 20px;
-            border-bottom: 1px solid var(--light-gray);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .cart-items {
-            padding: 20px;
-        }
-        
-        .cart-item {
-            display: flex;
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--light-gray);
-        }
-        
-        .cart-item-image {
-            width: 80px;
-            height: 80px;
-            border-radius: 8px;
-            overflow: hidden;
-            margin-right: 15px;
-        }
-        
-        .cart-item-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .cart-item-details {
-            flex: 1;
-        }
-        
-        .cart-item-title {
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-        
-        .cart-item-price {
-            color: var(--primary);
-            font-weight: 600;
-        }
-        
-        .cart-item-remove {
-            color: var(--gray);
-            cursor: pointer;
-            padding: 5px;
-        }
-        
-        .cart-summary {
-            padding: 20px;
-            border-top: 1px solid var(--light-gray);
-        }
-        
-        .cart-total {
-            display: flex;
-            justify-content: space-between;
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-        
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 999;
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition);
-        }
-        
-        .overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        /* Image Upload Instructions */
-        .image-instructions {
-            background-color: #f8f9fa;
-            border-left: 4px solid var(--primary);
-            padding: 25px;
-            margin: 40px 0;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        .instruction-title {
-            color: var(--primary);
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-        }
-        
-        .instruction-steps {
-            margin-left: 20px;
-        }
-        
-        .instruction-steps li {
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
-        
-        .code {
-            background-color: #2d3436;
-            color: white;
-            padding: 3px 6px;
-            border-radius: 4px;
-            font-family: monospace;
-            display: inline-block;
-            margin: 0 3px;
-        }
-        
-        .highlight {
-            background-color: #fff9db;
-            padding: 2px 5px;
-            border-radius: 3px;
-        }
-        
-        @media (max-width: 992px) {
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-        }
-        
         @media (max-width: 768px) {
             .hamburger {
                 display: block;
@@ -629,38 +521,13 @@
                 font-size: 2.3rem;
             }
             
-            .cart-modal {
-                width: 100%;
-                max-width: 380px;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .cta h2 {
-                font-size: 2rem;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .section-title h2 {
-                font-size: 2rem;
+            .diagnostic-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/3121765225" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
     <!-- Header -->
     <header>
         <div class="container header-container">
@@ -676,194 +543,156 @@
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#products">Shop</a></li>
-                    <li><a href="#instructions">Instructions</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#diagnose">Diagnose</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            
-            <div class="nav-icons">
-                <a href="#" class="nav-icon">
-                    <i class="fas fa-search"></i>
-                </a>
-                <a href="#" class="nav-icon">
-                    <i class="fas fa-user"></i>
-                </a>
-                <a href="#" class="nav-icon cart-icon">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-count">0</span>
-                </a>
-            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Premium Collectible Figures</h1>
-            <p>Discover our exclusive collection of handcrafted figures, each piece telling a unique story and crafted with passion and precision.</p>
-            <a href="#products" class="btn btn-secondary">Shop Collection</a>
+            <h1>Figurine Gallery</h1>
+            <p>Premium collectible figures for enthusiasts and collectors worldwide</p>
+            <a href="#gallery" class="btn btn-secondary">View Collection</a>
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section id="products" class="products">
+    <!-- Gallery Section -->
+    <section id="gallery" class="products">
         <div class="container">
             <div class="section-title">
                 <h2>Featured Figures</h2>
-                <p>Add your own figures by replacing the placeholder images</p>
+                <p>Your figurine collection showcase</p>
             </div>
             
             <div class="products-grid">
-                
+                <!-- Product 1 -->
                 <div class="product-card">
                     <div class="product-image">
-                        
-                        <img src="/images/venom.jpeg" alt="Venom Figure">
+                        <!-- Replace with your image path -->
+                        <img src="images/outs.JPEG" alt="Outslang Figure" onerror="this.parentElement.innerHTML='<div style=\'color:#ff7675;font-weight:bold;padding:20px;text-align:center;\'>Image failed to load<br>Check file path</div>'">
                         <div class="product-badge">Limited Edition</div>
                     </div>
                     <div class="product-info">
-                        <h3 class="product-title">Mythical Venom</h3>
-                        <p class="product-description">Hand-painted Venom figure with intricate details</p>
+                        <h3 class="product-title">Outslang Figure</h3>
+                        <p class="product-description">Hand-painted Oustlang figure with intricate details</p>
                         <div class="product-price">$750</div>
-                        <div class="product-meta">
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <button class="btn btn-primary add-to-cart">Add to Cart</button>
-                        </div>
                     </div>
                 </div>
                 
-                
+                <!-- Product 2 -->
                 <div class="product-card">
                     <div class="product-image">
-                        
-                        <img src="images/outs.JPEG" alt="Outslang Figure">
+                        <!-- Replace with your image path -->
+                        <img src="images/halo.JPEG" alt="Master Chief Figure" onerror="this.parentElement.innerHTML='<div style=\'color:#ff7675;font-weight:bold;padding:20px;text-align:center;\'>Image failed to load<br>Check file path</div>'">
                         <div class="product-badge">Best Seller</div>
                     </div>
                     <div class="product-info">
-                        <h3 class="product-title">Outslang</h3>
-                        <p class="product-description">Detailed Outslang figure with  armor</p>
+                        <h3 class="product-title">Master Chief Figure</h3>
+                        <p class="product-description">Detailed Master Chief figure with  armor</p>
                         <div class="product-price">$750</div>
-                        <div class="product-meta">
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <button class="btn btn-primary add-to-cart">Add to Cart</button>
-                        </div>
                     </div>
                 </div>
                 
-                
+                <!-- Product 3 -->
                 <div class="product-card">
                     <div class="product-image">
-                        
-                        <img src="/images/halo.jpeg" alt="Master Chief">
+                        <!-- Replace with your image path -->
+                        <img src="images/stichs.JPEG" alt="Stitchs" onerror="this.parentElement.innerHTML='<div style=\'color:#ff7675;font-weight:bold;padding:20px;text-align:center;\'>Image failed to load<br>Check file path</div>'">
                         <div class="product-badge">New</div>
                     </div>
                     <div class="product-info">
-                        <h3 class="product-title">Master Chief</h3>
-                        <p class="product-description">Mystical Master Chief details</p>
-                        <div class="product-price">$750</div>
-                        <div class="product-meta">
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                            <button class="btn btn-primary add-to-cart">Add to Cart</button>
-                        </div>
+                        <h3 class="product-title">Stitchs</h3>
+                        <p class="product-description">Mystical Stitchs with glowing details</p>
+                        <div class="product-price">$250</div>
                     </div>
                 </div>
                 
-                
+                <!-- Product 4 -->
                 <div class="product-card">
                     <div class="product-image">
-                        
-                        <img src="/images/mew.jpeg" alt="Mew & Rayquaza">
+                        <!-- Replace with your image path -->
+                        <img src="images/venom.JPEG" alt="Venom" onerror="this.parentElement.innerHTML='<div style=\'color:#ff7675;font-weight:bold;padding:20px;text-align:center;\'>Image failed to load<br>Check file path</div>'">
                         <div class="product-badge">Exclusive</div>
                     </div>
                     <div class="product-info">
-                        <h3 class="product-title">Mew and Rayquaza</h3>
-                        <p class="product-description">Detailed figures Pokemon</p>
-                        <div class="product-price">$250</div>
-                        <div class="product-meta">
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <button class="btn btn-primary add-to-cart">Add to Cart</button>
-                        </div>
+                        <h3 class="product-title">Venom</h3>
+                        <p class="product-description">Detailed figure Venom</p>
+                        <div class="product-price">$950</div>
                     </div>
-                </div>
-            </div>
-            
-
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <div class="section-title">
-                <h2>Why Choose Us</h2>
-            </div>
-            
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shipping-fast"></i>
-                    </div>
-                    <h3>Fast Shipping</h3>
-                    <p>Get your figures delivered quickly with our worldwide shipping options.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Secure Payments</h3>
-                    <p>Shop with confidence using our secure payment processing system.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-hand-holding-heart"></i>
-                    </div>
-                    <h3>Handcrafted Quality</h3>
-                    <p>Each figure is meticulously handcrafted with attention to detail.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>24/7 Support</h3>
-                    <p>Our customer service team is always ready to assist you.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="cta">
+    <!-- Diagnostic Section -->
+    <section id="diagnose" class="diagnostic-section">
         <div class="container">
-            <h2>Join Our Collector's Club</h2>
-            <p>Subscribe to our newsletter and get 10% off your first order, plus exclusive access to new releases and special promotions.</p>
-            <div class="cta-buttons">
-                <a href="#" class="btn btn-secondary">Subscribe Now</a>
-                <a href="#contact" class="btn" style="background: white; color: var(--primary);">Contact Us</a>
+            <div class="section-title">
+                <h2>Image Troubleshooting</h2>
+                <p>Diagnose and fix your image display issues</p>
+            </div>
+            
+            <div class="diagnostic-grid">
+                <div class="diagnostic-card">
+                    <h3><i class="fas fa-folder-open"></i> Folder Structure</h3>
+                    <p>Ensure your images are in an <code>images</code> folder in the same directory as your HTML file.</p>
+                    <div class="folder-structure">
+                        <pre>
+project/
+├── index.html
+├── images/
+│   ├── figure1.jpg
+│   ├── figure2.jpg
+│   ├── figure3.jpg
+│   └── figure4.jpg
+                        </pre>
+                    </div>
+                </div>
+                
+                <div class="diagnostic-card">
+                    <h3><i class="fas fa-file-image"></i> File Names</h3>
+                    <p>Check for these common issues:</p>
+                    <ul>
+                        <li><span class="status-icon status-bad">!</span> Case sensitivity (Figure.jpg vs figure.jpg)</li>
+                        <li><span class="status-icon status-bad">!</span> Spaces in file names (use dashes instead)</li>
+                        <li><span class="status-icon status-bad">!</span> Special characters (avoid !@#$%^&*)</li>
+                        <li><span class="status-icon status-good">✓</span> Lowercase with hyphens is safest</li>
+                    </ul>
+                </div>
+                
+                <div class="diagnostic-card">
+                    <h3><i class="fas fa-code"></i> HTML Paths</h3>
+                    <p>Use relative paths that match your folder structure:</p>
+                    <ul>
+                        <li><span class="status-icon status-good">✓</span> <code>src="images/outs.JPEG"</code></li>
+                        <li><span class="status-icon status-bad">!</span> <code>src="Figure1.JPG"</code> (case mismatch)</li>
+                        <li><span class="status-icon status-bad">!</span> <code>src="/images/figure1.jpg"</code> (leading slash)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="path-tester">
+                <h3><i class="fas fa-search"></i> Test Your Image Path</h3>
+                <p>Enter the path to your image to test it:</p>
+                
+                <div class="tester-form">
+                    <input type="text" id="imagePath" placeholder="images/figure1.jpg" value="images/figure1.jpg">
+                    <button class="btn btn-primary" onclick="testImage()">Test Image</button>
+                </div>
+                
+                <div class="image-preview">
+                    <h4>Preview</h4>
+                    <div class="preview-container" id="previewContainer">
+                        <p>Image will appear here if path is correct</p>
+                    </div>
+                    <div class="error-message" id="errorMessage">
+                        Error: Image not found at the specified path
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -879,29 +708,16 @@
                         <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
                     </div>
                 </div>
                 
                 <div class="footer-col">
-                    <h3>Shop</h3>
+                    <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="#">All Figures</a></li>
-                        <li><a href="#">New Arrivals</a></li>
-                        <li><a href="#">Best Sellers</a></li>
-                        <li><a href="#">Limited Editions</a></li>
-                        <li><a href="#">Sale</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h3>Information</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Shipping Policy</a></li>
-                        <li><a href="#">Return Policy</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#diagnose">Troubleshooting</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 
@@ -909,21 +725,60 @@
                     <h3>Contact Us</h3>
                     <ul class="footer-links">
                         <li><i class="fas fa-map-marker-alt"></i> Villa de Alvarez, Colima</li>
-                        <li><i class="fas fa-phone"></i> +52 312-1765225</li>
+                        <li><i class="fas fa-phone"></i> +52 3121765225</li>
                         <li><i class="fas fa-envelope"></i> contact@figurinegallery.com</li>
                     </ul>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2025 DepreART. All rights reserved.</p>
+                <p>&copy; 2025 DepreArt | Image Troubleshooting Solution</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script>
-        // Toggle Mobile Menu
+        // Image testing function
+        function testImage() {
+            const pathInput = document.getElementById('imagePath');
+            const previewContainer = document.getElementById('previewContainer');
+            const errorMessage = document.getElementById('errorMessage');
+            const imagePath = pathInput.value.trim();
+            
+            if (!imagePath) {
+                errorMessage.textContent = "Please enter an image path";
+                errorMessage.style.display = "block";
+                previewContainer.innerHTML = "<p>Enter a path to test</p>";
+                return;
+            }
+            
+            // Create a test image
+            const testImage = new Image();
+            
+            testImage.onload = function() {
+                previewContainer.innerHTML = '';
+                previewContainer.appendChild(testImage);
+                errorMessage.style.display = "none";
+            };
+            
+            testImage.onerror = function() {
+                previewContainer.innerHTML = "<p style='color:#ff7675;font-weight:bold;padding:20px;'>❌ Image not found</p>";
+                errorMessage.textContent = `Error: Could not load image at "${imagePath}"`;
+                errorMessage.style.display = "block";
+            };
+            
+            testImage.src = imagePath;
+            testImage.alt = "Test Image";
+            testImage.style.maxWidth = "100%";
+            testImage.style.maxHeight = "100%";
+        }
+        
+        // Initialize with first image test
+        window.onload = function() {
+            testImage();
+        };
+        
+        // Mobile menu toggle
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('nav ul');
         
@@ -932,46 +787,6 @@
             hamburger.querySelector('i').classList.toggle('fa-times');
             navMenu.classList.toggle('active');
         });
-        
-        // Add to Cart Functionality
-        const addToCartButtons = document.querySelectorAll('.add-to-cart');
-        const cartCount = document.querySelector('.cart-count');
-        
-        addToCartButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                let count = parseInt(cartCount.textContent);
-                cartCount.textContent = count + 1;
-                
-                // Animation effect
-                button.textContent = 'Added!';
-                button.style.backgroundColor = 'var(--success)';
-                
-                setTimeout(() => {
-                    button.textContent = 'Add to Cart';
-                    button.style.backgroundColor = '';
-                }, 1500);
-            });
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    navMenu.classList.remove('active');
-                    hamburger.querySelector('i').classList.add('fa-bars');
-                    hamburger.querySelector('i').classList.remove('fa-times');
-                }
-            });
-        });
     </script>
 </body>
-</html>
+</html> 
